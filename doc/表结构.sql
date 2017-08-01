@@ -1,3 +1,70 @@
+create sequence SEQ_BARCLASSIFY
+minvalue 1
+maxvalue 9999999999999999999999999999
+start with 1
+increment by 1
+cache 20;
+
+create sequence SEQ_BARCLASSIFYURL
+minvalue 1
+maxvalue 9999999999999999999999999999
+start with 1
+increment by 1
+cache 20;
+
+-- Create table
+create table BAR_CLASSIFY
+(
+  id            NUMBER(19) not null,
+  classify_name VARCHAR2(50),
+  date_created  TIMESTAMP(6)
+);
+-- Add comments to the table 
+comment on table BAR_CLASSIFY
+  is '导航分类';
+-- Add comments to the columns 
+comment on column BAR_CLASSIFY.id
+  is '主键';
+comment on column BAR_CLASSIFY.classify_name
+  is '分类名称';
+comment on column BAR_CLASSIFY.date_created
+  is '创建时间';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table BAR_CLASSIFY
+  add constraint KEY_BAR_CLASSIFY primary key (ID)
+  using index;
+
+
+-- Create table
+create table BAR_CLASSIFY_URL
+(
+  id              NUMBER(19) not null,
+  bar_classify_id NUMBER(19),
+  bar_url_name    VARCHAR2(50),
+  bar_url_address VARCHAR2(1000),
+  date_created    TIMESTAMP(6)
+);
+-- Add comments to the table 
+comment on table BAR_CLASSIFY_URL
+  is '导航分类url';
+-- Add comments to the columns 
+comment on column BAR_CLASSIFY_URL.id
+  is '主键';
+comment on column BAR_CLASSIFY_URL.bar_classify_id
+  is '导航类别';
+comment on column BAR_CLASSIFY_URL.bar_url_name
+  is '地址名称';
+comment on column BAR_CLASSIFY_URL.bar_url_address
+  is '地址url';
+comment on column BAR_CLASSIFY_URL.date_created
+  is '创建时间';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table BAR_CLASSIFY_URL
+  add constraint KEY_BAR_CLASSIFY_URL primary key (ID)
+  using index ;
+
+
+
 
 create table TBUG
 (

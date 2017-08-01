@@ -114,12 +114,12 @@
 	<bean name="MapperScannerConfigurer1" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="ry.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory1" />
-		<property name="annotationClass" value="ry.annotation.MybatisDateBaseOracleOne" />
+		<property name="annotationClass" value="com.wry.annotation.MybatisDateBaseOracleOne" />
 	</bean>
 	<bean name="MapperScannerConfigurer2" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory2" />
 		<property name="basePackage" value="ry.dao" />
-		<property name="annotationClass" value="ry.annotation.MybatisDateBaseOracleTwo" />
+		<property name="annotationClass" value="com.wry.annotation.MybatisDateBaseOracleTwo" />
 	</bean>
 
 	<!-- 配置事务管理器 -->

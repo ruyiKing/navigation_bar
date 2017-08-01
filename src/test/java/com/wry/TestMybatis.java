@@ -17,11 +17,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.alibaba.fastjson.JSON;
 
-import ry.model.SysPermItem;
-import ry.model.User;
-import ry.service.SysPermItemService;
-import ry.service.UserRoleService;
-import ry.service.UserService;
+import com.wry.model.SysPermItem;
+import com.wry.model.User;
+import com.wry.service.SysPermItemService;
+import com.wry.service.UserRoleService;
+import com.wry.service.UserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:spring.xml", "classpath:spring-mybatis.xml" })
