@@ -30,6 +30,14 @@
 							<li><a name="html5" id="html5" title="HTML5">HTML5</a></li>
 						</ul>
 					</li>
+                    <li><a href="" title="导航管理">导航管理</a>
+                        <ul>
+                            <li>
+                                <a name="barClassify" id="barClassify"  title="导航分类">导航分类管理</a>
+                            </li>
+                            <li><a name="barClassifyUrl" id="barClassifyUrl" title="HTML5">导航地址管理</a></li>
+                        </ul>
+                    </li>
 					<!-- <li><a href="http://sc.chinaz.com" title="CSS">CSS</a>
 						<ul>
 							<li><a href="http://sc.chinaz.com" title="CSS入门">CSS入门</a></li>
@@ -83,6 +91,17 @@
 					var url="http://sc.chinaz.com/jiaoben/130531502630.htm";
 					window.frames["_mainArea"].location.replace(url);
 				});
+
+                $("#barClassify").click(function(){
+                    var url="<%=request.getContextPath()%>/barClassify/barClassifyList.do";
+                    window.frames["_mainArea"].location.replace(url);
+                });
+
+                <%--$("#barClassifyUrl").click(function(){--%>
+                    <%--var url="<%=request.getContextPath()%>/barClassifyUrl/barClassifyUrlList.do";--%>
+                    <%--window.frames["_mainArea"].location.replace(url);--%>
+                <%--});--%>
+
 			});
 		</script>
 		<div style="text-align: left; clear: both">

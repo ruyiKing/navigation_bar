@@ -9,9 +9,6 @@ import com.wry.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.wry.dao.UserMapper;
-import com.wry.model.User;
-import com.wry.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
