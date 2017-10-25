@@ -19,24 +19,31 @@
 
   </head>
 
-  <body>
+  <body class="bg_img" >
+
+  <style type="text/css">
+      .bg_img{
+          background-image:url('/images/client/signin-bgimg.jpg');
+      }
+  </style>
 
     <div class="container">
+        <%--<div><img src="/images/client/signin-bgimg.jpg">--%>
 
-      <form class="form-signin" method="post" >
-        <h2 class="form-signin-heading">请登录</h2>
-        <label for="inputEmail" class="sr-only">User name</label>
-        <input type="text" id="inputEmail" class="form-control" placeholder="User name" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> 记 住
-          </label>
+          <form class="form-signin" method="post" >
+            <h2 class="form-signin-heading">请登录</h2>
+            <label for="inputEmail" class="sr-only">User name</label>
+            <input type="text" id="inputEmail" class="form-control" placeholder="User name" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me"> 记 住
+              </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" onclick="signIn()" type="button">登 录</button>
+          </form>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" onclick="signIn()" type="button">登 录</button>
-      </form>
-
     </div>
 
   </body>
