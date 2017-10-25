@@ -17,6 +17,7 @@ public interface UserService {
 	List<User> getAll2();
 
 	List<User> findUserByName(Map<String, Object> map);
+	User findUserByLoginName(Map<String, Object> map);
 
 	int addUsers(User user);
 

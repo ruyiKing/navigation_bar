@@ -46,12 +46,12 @@ create table BAR_CLASSIFY_URL
 );
 -- Add comments to the table 
 comment on table BAR_CLASSIFY_URL
-  is '导航分类url';
+  is '导航url';
 -- Add comments to the columns 
 comment on column BAR_CLASSIFY_URL.id
   is '主键';
 comment on column BAR_CLASSIFY_URL.bar_classify_id
-  is '导航类别';
+  is '导航分类id';
 comment on column BAR_CLASSIFY_URL.bar_url_name
   is '地址名称';
 comment on column BAR_CLASSIFY_URL.bar_url_address

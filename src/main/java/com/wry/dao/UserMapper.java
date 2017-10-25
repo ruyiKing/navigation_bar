@@ -26,6 +26,7 @@ public interface UserMapper {
 	List<User> getAll2();
 
 	List<User> selectByParameter(Map<String, Object> map);
+	User findUserByLoginName(Map<String, Object> map);
 
 	Integer getAllCount();
 }

@@ -25,7 +25,14 @@
     from TUSER
     where NAME = #{userName,jdbcType=VARCHAR}
   </select>
-  
+
+  <select id="findUserByLoginName" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select
+    <include refid="Base_Column_List" />
+    from TUSER
+    where LOGIN_NAME = #{loginName,jdbcType=VARCHAR}
+  </select>
+
   <select id="getAll" resultMap="BaseResultMap" parameterType="java.util.Map">
   	
     <![CDATA[ 

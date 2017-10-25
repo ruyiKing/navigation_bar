@@ -1,46 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/images/icos/favicon.ico">
 
-    <title>史上最NB系统</title>
+    <title>XX系统</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/frames/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/frames/bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="../../css/signIn/signin.css" rel="stylesheet">
+      <script type="text/javascript" src="/js/jquery1.11.3.min.js"></script>
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="/frames/bootstrap-3.3.7/docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/frames/bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
 
     <div class="container">
 
-      <form class="form-signin">
+      <form class="form-signin" method="post" >
         <h2 class="form-signin-heading">请登录</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputEmail" class="sr-only">User name</label>
+        <input type="text" id="inputEmail" class="form-control" placeholder="User name" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
@@ -48,19 +34,18 @@ pageEncoding="UTF-8"%>
             <input type="checkbox" value="remember-me"> 记 住
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" onclick="signIn()" type="submit">登 录</button>
+        <button class="btn btn-lg btn-primary btn-block" onclick="signIn()" type="button">登 录</button>
       </form>
 
-    </div> <!-- /container -->
+    </div>
 
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/frames/bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 
-    <script>
+  <script language="javascript" type="text/javascript">
         function signIn() {
-            alert("调");
+            var inputEmail = jQuery("#inputEmail").val();
+            alert(inputEmail);
+            window.location.href='<%=request.getContextPath()%>/sign/signIn.do?inputEmail='+inputEmail;
         }
     </script>
 </html>

@@ -20,8 +20,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
-import com.wry.model.User;
-import com.wry.service.UserService;
 import com.wry.util.DataGridModel;
 
 @Controller
@@ -33,10 +31,12 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping("/showUser.do")
-	public String showUser(Long id,HttpServletRequest request) {
+	public String showUser(HttpServletRequest request) {
+		Long id = Long.parseLong(request.getParameter("id"));
 		User u = userService.findUserById(id);
+		logger.info("登录名："+u.getName());
 		request.setAttribute("user", u);
-		return "showUser";
+		return "jsp/user/showUser";
 	}
 	
 	@RequestMapping("/userList.do")
